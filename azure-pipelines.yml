@@ -6,31 +6,44 @@
 trigger:
 - master
 
-#pool:
-##  vmImage: ubuntu-latest
+pool:
+  vmImage: ubuntu-latest
 #  vmImage: windows-latest
+
 # Build against multiple platforms
+
+
+#strategy:
+ # matrix:
+  #  linux:
+   #   imageName: "ubuntu-16.04"
+    #mac:
+     # imageName: "macos-10.14"
+    #windows:
+     # imageName: "vs2017-win2016"
+  #maxParallel: 3
+
+#pool:
+ # vmImage: $(imageName)
+
+# Build using multiple versions of jdk
 
 strategy:
   matrix:
-    linux:
-      imageName: "ubuntu-16.04"
-    mac:
-      imageName: "macos-10.14"
-    windows:
-      imageName: "vs2017-win2016"
-  maxParallel: 3
+    jdk10:
+      jdk_version: "1.10"
+    jdk11:
+      jdk_version: "1.11"
+  maxParallel: 2
 
-pool:
-  vmImage: $(imageName)
-  
 steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
+    #jdkVersionOption: '1.8' # we will comment this, since we need to try the build with multiple versions
+    jdkVersionOption: $(jdk_version)
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
