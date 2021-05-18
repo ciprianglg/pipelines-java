@@ -1,5 +1,6 @@
-[![Build Status](https://dev.azure.com/cipriangologan/LearnAzureDevOps/_apis/build/status/ciprianglg.pipelines-java?branchName=master)](https://dev.azure.com/cipriangologan/LearnAzureDevOps/_build/latest?definitionId=4&branchName=master)
+[![Build Status](https://dev.azure.com/cipriangologan/LearnAzureDevOps/_apis/build/status/ciprianglg.pipelines-java?branchName=master)](https://dev.azure.com/cipriangologan/LearnAzureDevOps/_build/latest?definitionId=4&branchName=master) :)
 
+ 
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
