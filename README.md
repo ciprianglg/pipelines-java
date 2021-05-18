@@ -1,5 +1,6 @@
-[![Build Status](https://dev.azure.com/cipriangologan/LearnAzureDevOps/_apis/build/status/ciprianglg.pipelines-java?branchName=master)](https://dev.azure.com/cipriangologan/LearnAzureDevOps/_build/latest?definitionId=4&branchName=master) :)
 
+Yaml pipeline: [![Build Status](https://dev.azure.com/cipriangologan/LearnAzureDevOps/_apis/build/status/ciprianglg.pipelines-java?branchName=master)](https://dev.azure.com/cipriangologan/LearnAzureDevOps/_build/latest?definitionId=4&branchName=master)
+Classic pipeline: [![Build status](https://dev.azure.com/cipriangologan/LearnAzureDevOps/_apis/build/status/LearnAzureDevOps-Maven-CI)](https://dev.azure.com/cipriangologan/LearnAzureDevOps/_build/latest?definitionId=5)
  
 # Contributing
 
