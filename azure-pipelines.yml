@@ -6,11 +6,11 @@
 trigger:
 - master
 
-pool:
-  vmImage: ubuntu-latest
+#pool:
+ # vmImage: ubuntu-latest
 #  vmImage: windows-latest
 
-# Build against multiple platforms
+######### Build against multiple platforms
 
 
 #strategy:
@@ -26,15 +26,31 @@ pool:
 #pool:
  # vmImage: $(imageName)
 
-# Build using multiple versions of jdk
+######### Build using multiple versions of jdk
+
+#strategy:
+ # matrix:
+  #  jdk10:
+   #   jdk_version: "1.10"
+    #jdk11:
+     # jdk_version: "1.11"
+  #maxParallel: 2
+
+######### Build using multiple platforms and multiple version of JDK
 
 strategy:
   matrix:
-    jdk10:
+    jdk10_linux:
+      imageName: "ubuntu-16.04"
       jdk_version: "1.10"
-    jdk11:
+    jdk11_windows:
+      imageName: "vs2017-win2016"
       jdk_version: "1.11"
   maxParallel: 2
+
+pool:
+  vmImage: $(imageName)
+
 
 steps:
 - task: Maven@3
